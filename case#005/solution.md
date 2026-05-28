@@ -20,8 +20,8 @@ where
    incident_id= 74;
 ```
 2 clues are found
-I heard someone mention a server in Helsinki 
-I saw someone holding a keycard marked QX- succeeded by a two-digit odd number 
+- I heard someone mention a server in Helsinki 
+- I saw someone holding a keycard marked QX- succeeded by a two-digit odd number 
 And dont forget the first clue access_date = 19890421
 > Let's check these clues to find a list of suspect id!
 
