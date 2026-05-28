@@ -23,6 +23,7 @@ A witness reported a man in a trench coat with a scar on his left cheek fleeing 
    where suspect_id in (3,183);
 ```
 > 3: NULL
+
 > 183: I wasn’t going to steal it, but I did. > Vincent Malone, case solved
 
 Supa thanks to bro who created this: https://www.sqlnoir.com/cases/001-The-Vanishing-Briefcase
