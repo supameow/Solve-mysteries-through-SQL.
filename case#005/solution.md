@@ -105,9 +105,9 @@ on f.employee_id = e.id
 where facility_name like '%18%'
 ```
 3 names are found: 
-Katie Watkins | id: 290 | access_time: 12:56
-Hristo Bogoev | id: 297 | access_time: 09:01
-Elizabeth Gordon | id: 99 | access_time: 08:55 
+> Katie Watkins | id: 290 | access_time: 12:56
+> Hristo Bogoev | id: 297 | access_time: 09:01
+> Elizabeth Gordon | id: 99 | access_time: 08:55 
 
 Elizabeth Gordon seems to match the email content: an innocent colleague who received the fake alarm and logged her access before 9.
 Now there're only 2 left: Katie Watkins & Hristo Bogoev
