@@ -57,8 +57,8 @@ where
    c.server_location like '%Helsinki%'
 ```
 Found a suspect! employee_id: 99
-Tried to submit but it was not her. However, when joining the email content of her as the recipient, this girl received an email relating to the case:
-I noticed something strange with the alarm system. There might be a potential malfunction near the chip. Thought you should check it out to be safe.
+- Tried to submit but it was not her. However, when joining the email content of her as the recipient, this girl received an email relating to the case:
+'I noticed something strange with the alarm system. There might be a potential malfunction near the chip. Thought you should check it out to be safe.'
 > Since 99 is not the saboteur, let's continue to check whoever sent her this email
 
 ### 4. Who sent the suspicious email?
@@ -73,8 +73,8 @@ where recipient_employee_id=99
 >sender_employee_id: 263
 
 Now chase all the content about this one for more clues
-In the witness_statements: checked, nothing.
-In the email_logs: hmm, found something here.
+- In the witness_statements: checked, nothing.
+- In the email_logs: hmm, found something here.
 
 ```sql
 select *
@@ -83,9 +83,8 @@ where recipient_employee_id=263
 ```
 This group of saboteurs are pro! They hid the sender email (as NULL). But we can find something in the content:
 
-email 1: L’s schedule puts her close enough, but we need her inside F18 before 9. Trigger a minor alert or routine checkup to send her in by 8:30. Make sure she logs the visit. That part matters.
-
-email 2: Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves. No questions. Just ensure the timing lines up. The trail will lead exactly where it needs to.
+- email 1: L’s schedule puts her close enough, but we need her inside F18 before 9. Trigger a minor alert or routine checkup to send her in by 8:30. Make sure she logs the visit. That part matters.
+- email 2: Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves. No questions. Just ensure the timing lines up. The trail will lead exactly where it needs to.
 
 > They are talking about F18, this sounds like a floor/area where the QuantaX was placed. Their plan is: try to alarm a colleague to check before they act so this one would ignore whatever they did after that (so smart here!!). Then after this colleague left, 'he' would conduct his crime to destroy the QuantaX.
 
