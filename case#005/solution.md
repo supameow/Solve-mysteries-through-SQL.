@@ -1,4 +1,4 @@
-# Case #005: The Silicon Sabotage
+# Case #005: The Silicon Sabotage 🐱‍💻
 QuantumTech, Miami’s leading technology corporation, was about to unveil its groundbreaking microprocessor called “QuantaX.” Just hours before the reveal, the prototype was destroyed, and all research data was erased. Detectives suspect corporate espionage.
 
 ### 1. Start from incident_reports: 
@@ -9,8 +9,7 @@ select * from incident_reports
 where 
    location like '%QuantumTech%';
 ```
-id: 74
-date: 19890421
+id: 74 | date: 19890421
 
 ### 2. Search the incident_id in witness_statements
 Plug the incident_id in the witness_statements table.
@@ -64,7 +63,7 @@ I noticed something strange with the alarm system. There might be a potential ma
 
 ### 4. Who sent the suspicious email?
 Let's check if there's any suspicious content about the sender.
-First, find the one who sent email to employee_id: 99
+First, find the one who sent the email to employee_id: 99
 ```sql
 select
    sender_employee_id 
@@ -72,8 +71,9 @@ from email_logs
 where recipient_employee_id=99 
 ```
 >sender_employee_id: 263
+
 Now chase all the content about this one for more clues
-In the witness_statement: checked, nothing.
+In the witness_statements: checked, nothing.
 In the email_logs: hmm, found something here.
 
 ```sql
@@ -91,6 +91,7 @@ email 2: Unlock 18 quietly by 9. He’ll use his own credentials to access it sh
 
 ### 5. Got the saboteur!
 So, let's take a look at the ones who logged their access in F18. Since the emails are saying something about timing, make sure to include the access_time.
+Use the last table facility_access_logs
 
 ```sql
 select 
@@ -105,7 +106,11 @@ where facility_name like '%18%'
 3 names are found: 
 Katie Watkins | id: 290 | access_time: 12:56
 Hristo Bogoev | id: 297 | access_time: 09:01
-Elizabeth Gordon | id: 99 | access_time: 08:55 > This one seems to match the email content: an innocent colleague who received the fake alarm and logged her access before 9.
+Elizabeth Gordon | id: 99 | access_time: 08:55 
 
+Elizabeth Gordon seems to match the email content: an innocent colleague who received the fake alarm and logged her access before 9.
 Now there're only 2 left: Katie Watkins & Hristo Bogoev
-We can try to submit both to see who is the saboteur but since the email said 'Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves', the crime must be right after 9, which makes Hristo Bogoev more the correct answer!
+> We can try to submit both to see who is the saboteur but since the email said 'Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves', the crime must be right after 9, which makes Hristo Bogoev more of the correct answer!
+
+Link to the case: https://www.sqlnoir.com/cases/005-The-Silicon-Sabotage 
+Supa thank to the game creator!
