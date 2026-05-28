@@ -9,7 +9,7 @@ select * from incident_reports
 where 
    location like '%QuantumTech%';
 ```
-id: 74 | date: 19890421
+> id: 74 | date: 19890421
 
 ### 2. Search the incident_id in witness_statements
 Plug the incident_id in the witness_statements table.
@@ -20,10 +20,11 @@ where
    incident_id= 74;
 ```
 2 clues are found
-- I heard someone mention a server in Helsinki 
-- I saw someone holding a keycard marked QX- succeeded by a two-digit odd number. 
-And dont forget the first clue access_date = 19890421
-> Let's check these clues to find a list of suspect id!
+> I heard someone mention a server in Helsinki
+> I saw someone holding a keycard marked QX- succeeded by a two-digit odd number.
+ 
+> And dont forget the first clue access_date = 19890421
+Let's check these clues to find a list of suspect id!
 
 ### 3. Chasing the clues
 Let's join everything together
@@ -56,10 +57,10 @@ where
    and
    c.server_location like '%Helsinki%'
 ```
-Found a suspect! employee_id: 99
+> Found a suspect! employee_id: 99
 - Tried to submit but it was not her. However, when joining the email content of her as the recipient, this girl received an email relating to the case:
 'I noticed something strange with the alarm system. There might be a potential malfunction near the chip. Thought you should check it out to be safe.'
-> Since 99 is not the saboteur, let's continue to check whoever sent her this email
+- Since 99 is not the saboteur, let's continue to check whoever sent her this email
 
 ### 4. Who sent the suspicious email?
 Let's check if there's any suspicious content about the sender.
@@ -81,12 +82,12 @@ select *
 from email_logs
 where recipient_employee_id=263
 ```
-This group of saboteurs are pro! They hid the sender email (as NULL). But we can find something in the content:
+- This group of saboteurs are pro! They hid the sender email (as NULL). But we can find something in the content:
 
-- email 1: L’s schedule puts her close enough, but we need her inside F18 before 9. Trigger a minor alert or routine checkup to send her in by 8:30. Make sure she logs the visit. That part matters.
-- email 2: Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves. No questions. Just ensure the timing lines up. The trail will lead exactly where it needs to.
+> email 1: L’s schedule puts her close enough, but we need her inside F18 before 9. Trigger a minor alert or routine checkup to send her in by 8:30. Make sure she logs the visit. That part matters.
+> email 2: Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves. No questions. Just ensure the timing lines up. The trail will lead exactly where it needs to.
 
-> They are talking about F18, this sounds like a floor/area where the QuantaX was placed. Their plan is: try to alarm a colleague to check before they act so this one would ignore whatever they did after that (so smart here!!). Then after this colleague left, 'he' would conduct his crime to destroy the QuantaX.
+- They are talking about F18, this sounds like a floor/area where the QuantaX was placed. Their plan is: try to alarm a colleague to check before they act so this one would ignore whatever they did after that (so smart here!!). Then after this colleague left, 'he' would conduct his crime to destroy the QuantaX.
 
 ### 5. Got the saboteur!
 So, let's take a look at the ones who logged their access in F18. Since the emails are saying something about timing, make sure to include the access_time.
