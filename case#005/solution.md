@@ -116,4 +116,4 @@ Now there're only 2 left: Katie Watkins & Hristo Bogoev
 > We can try to submit both to see who is the saboteur but since the email said 'Unlock 18 quietly by 9. He’ll use his own credentials to access it shortly after L leaves', the crime must be right after 9, which makes Hristo Bogoev more of the correct answer!
 
 Link to the case: https://www.sqlnoir.com/cases/005-The-Silicon-Sabotage 
-Supa thank to the game creator!
+Supa thanks to the game creator!
