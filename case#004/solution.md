@@ -52,7 +52,7 @@ where recipient_id= 58;
 okay... killing for a Lambo
 
 ### 3. Let's find the Lambo dude
-Since the last clue we got is a Lambo car, let's chase all the Lambo owner and their script
+Since the last clue we got is a Lambo car, let's chase all the Lambo owners and their scripts
 ```sql
 select 
    i.person_id,
