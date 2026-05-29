@@ -49,7 +49,10 @@ where
    and 
    s.suspicious_activity is not null;
 ```
-> Got a really long list, but there're some suspicious activity we can notice: Spotted entering late at night, Seen arguing with an unknown person, Left suddenly at 3 AM.
+> Got a really long list, but there're some suspicious activity we can notice: 'Spotted entering late at night', 'Seen arguing with an unknown person', 'Left suddenly at 3 AM.'
+
 Hmm, not sure if I missed any clue. It was a quite long list to check though.
 
 Because the crime was conducted in the early hours of August 14 then the guy who left suddenly at 3 AM is likely to be the murderer. Check his confession to make sure then submit him to the police.
+
+Supa thanks to the bro who created this: https://www.sqlnoir.com/cases/003-The-Miami-Marina-Murder 
