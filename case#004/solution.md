@@ -66,7 +66,7 @@ left join person p
 on i.person_id = p.id 
 where car_make like '%Lambo%'
 ```
-> Gocha 'I ordered the hit. It was me. You caught me.' - 97 (Marco Santos)
+> Gotcha 'I ordered the hit. It was me. You caught me.' - 97 (Marco Santos)
 
 Not really into the storyline of this case... 
 Anyway, supa thanks to the bro who created this: https://www.sqlnoir.com/cases/004-The-Midnight-Masquerade-Murder
